@@ -5,3 +5,10 @@
 body {
   @apply font-PlusJakartaSans;
 }
+
+@layer components {
+  .btn {
+    @apply bg-primary-brightBlue text-neutral-light-veryLightSideNavCards  rounded-full 
+    hover:bg-primary-btnHover;
+  }
+}
