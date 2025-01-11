@@ -2,8 +2,8 @@ import VerticalIcon from "../assets/icon-vertical-ellipsis.svg";
 import logo from "../assets/logo-mobile.svg";
 function NavBar() {
   return (
-    <div className="fixed top-0 left-0 w-full bg-light-veryLightSideNavCards flex flex-row  items-center   border-b-[1px] border-black-100 gap-8 ">
-      <div className="flex flex-row gap-3 items-center p-7 pl-8 border-r-[1px] border-black-100 w-[350px]">
+    <div className="fixed top-0 left-0 w-full bg-light-veryLightSideNavCards flex flex-row  items-center  border-b-[1px] border-black-100 gap-8 ">
+      <div className="flex flex-row gap-3 items-center p-7 pl-8 border-r-[1px] border-black-100 w-[365px]">
         <div className="w-6 h-6">
           <img src={logo} alt="icon" className="object-contain" />
         </div>
