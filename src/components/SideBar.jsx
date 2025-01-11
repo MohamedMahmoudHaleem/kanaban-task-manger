@@ -31,6 +31,18 @@ function SideBar() {
               </li>
             );
           })}
+          <li className="w-full">
+            <button className="w-11/12 py-3 pl-8  flex flex-row items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:opacity-70">
+              <div className="">
+                <img
+                  src={BoardIcon}
+                  className="object-contain"
+                  alt="boardIcon"
+                />
+              </div>
+              + Create New Board
+            </button>
+          </li>
         </ul>
       </div>
     </div>

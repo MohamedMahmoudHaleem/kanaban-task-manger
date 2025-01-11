@@ -3,7 +3,7 @@ import SideBar from "./SideBar.jsx";
 
 function MainContainer() {
   return (
-    <div className="flex flex-row min-h-screen ">
+    <div className="flex flex-row min-h-screen overflow-hidden">
       <SideBar />
       <Board />
     </div>
