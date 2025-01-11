@@ -24,6 +24,7 @@ export default {
             lightNewColumn: "#E9EFFA",
             darkGrayishBlue: "hsl(236, 9%, 61%)",
             veryDarkGrayishBlue: "hsl(235, 19%, 35%)",
+            
           },
           //dark theme color
           dark: {

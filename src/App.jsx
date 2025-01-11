@@ -1,12 +1,11 @@
+import MainContainer from "./components/MainContainer.jsx";
 import NavBar from "./components/NavBar.jsx";
-import SideBar from "./components/SideBar.jsx";
 
 export default function App() {
   return (
-    <div className="h-[2000px] relative">
+    <div className=" ">
       <NavBar />
-      {/* <SideBar /> */}
-      {/* <Main/> */}
+      <MainContainer />
     </div>
   );
 }
