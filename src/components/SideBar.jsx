@@ -12,12 +12,12 @@ function SideBar() {
   ];
   return (
     <div className="mt-[92px] bg-natural-light-veryLightSideNavCards w-[370px]">
-      <div className="flex flex-col mt-6 items-start justify-between min-h-[85%] ">
+      <div className="flex flex-col mt-7 items-start justify-between min-h-[90%]">
         <div>
           <p className="text-sm ml-7 place-self-start text-neutral-light-ContentText font-semibold tracking-widest">
             ALL BOARDS (3)
           </p>
-          <ul className=" flex flex-col gap-4 py-4  items-start w-full ">
+          <ul className="flex flex-col gap-4 py-4 items-start w-full ">
             {data.map((element, index) => {
               return (
                 <li key={index} className="w-full group ">
@@ -59,15 +59,15 @@ function SideBar() {
               className="cursor-pointer border-none relative appearance-none w-10 h-5 border-2 bg-white rounded-xl before:content-[''] before:absolute before:top-[50%] before:-translate-y-1/2 before:left-5 before:w-4 before:h-4 before:rounded-full before:bg-primary-brightBlue 
             before:translate-x-0 before:transition-all before:duration-300 
            checked:bg-primary-brightBlue checked:transition-all checked:duration-300
-            before:checked:bg-white before:checked:-translate-x-4 before:checked:transition-all before:checked:duration-300 "
+            before:checked:bg-white before:checked:-translate-x-4 before:checked:transition-all before:checked:duration-300"
             />
           </div>
           <div>
             <img src={LightIcon} alt="lightIcon" />
           </div>
         </div>
-        <div className="flex flex-row justify-start items-center gap-4   mx-auto">
-          <button className='flex flex-row justify-start items-center gap-4    mx-auto' >
+        <div className="flex flex-row justify-start items-center gap-4 mx-auto mb-4 hover:transition-all hover:duration-200 hover:opacity-70">
+          <button className="flex flex-row justify-start items-center gap-4 mx-auto font-bold text-neutral-light-ContentText">
             <div>
               <img src={HideIcon} alt="hideIcon" />
             </div>
