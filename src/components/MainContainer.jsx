@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { kanbanContext } from "../Context/kanbanContext.jsx";
 import Board from "./Board .jsx";
 import SideBar from "./SideBar.jsx";
+import ButtonCollapse from "./ButtonColapse.jsx";
 
 function MainContainer() {
   const { open, handleOpen } = useContext(kanbanContext);
