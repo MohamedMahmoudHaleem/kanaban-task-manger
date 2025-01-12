@@ -22,7 +22,7 @@ function SideBar() {
           ${
             open
               ? "block"
-              : "w-[0px] overflow-hidden transition-all duration-700 ease-in-out "
+              : "w-0 overflow-hidden transition-all duration-700 ease-in-out "
           }`}
     >
       <div
