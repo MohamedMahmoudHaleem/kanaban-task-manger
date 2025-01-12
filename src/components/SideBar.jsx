@@ -17,11 +17,10 @@ function SideBar() {
   ];
   return (
     <div
-      className={`mt-[92px] bg-natural-light-veryLightSideNavCards
-          w-[370px]
+      className={`mt-[92px] bg-natural-light-veryLightSideNavCards         
           ${
             open
-              ? "block"
+              ? " w-[370px]"
               : "w-0 overflow-hidden transition-all duration-700 ease-in-out "
           }`}
     >
