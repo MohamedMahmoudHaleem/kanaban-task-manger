@@ -1,5 +1,5 @@
-import VerticalIcon from "../assets/icon-vertical-ellipsis.svg";
-import logo from "../assets/logo-mobile.svg";
+import VerticalIcon from "../../../../assets/icon-vertical-ellipsis.svg";
+import logo from "../../../../assets/logo-mobile.svg";
 function NavBar() {
   return (
     <div className="fixed top-0 left-0 w-full bg-neutral-light-veryLightSideNavCards flex flex-row  items-center  border-b-[1px] border-black-100 gap-8 ">

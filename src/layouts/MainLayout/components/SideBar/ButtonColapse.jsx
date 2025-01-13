@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { kanbanContext } from "../Context/kanbanContext.jsx";
-import HideIcon from "../assets/icon-hide-sidebar.svg";
+import { kanbanContext } from "../../../../Context/kanbanContext.jsx";
+import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 function ButtonCollapse() {
   const { handleOpen } = useContext(kanbanContext);
   return (

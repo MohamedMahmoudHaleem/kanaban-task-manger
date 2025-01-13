@@ -1,20 +1,29 @@
 // import BoardIcon from "../assets/icons/BoardIcon.jsx";
-import { useContext } from "react";
-import BoardIcon from "../assets/icon-board.svg";
-import DarkIcon from "../assets/icon-dark-theme.svg";
-import LightIcon from "../assets/icon-light-theme.svg";
-import HideIcon from "../assets/icon-hide-sidebar.svg";
-import { kanbanContext } from "../Context/kanbanContext.jsx";
+import BoardIcon from "../../../../assets/icon-board.svg";
+import DarkIcon from "../../../../assets/icon-dark-theme.svg";
+import LightIcon from "../../../../assets/icon-light-theme.svg";
+import { useContext, useState } from "react";
+import { kanbanContext } from "../../../../Context/kanbanContext.jsx";
+import AddNewBoard from "../NavBar/AddNewBoard.jsx";
+import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 // import ButtonCollapse from "./ButtonColapse.jsx";
 function SideBar() {
   const { open, handleOpen } = useContext(kanbanContext);
   // console.log("✌️ ~ handleOpen ~ open:", open);
+  const [openNewBoard, setAddNewBoard] = useState(false);
+  const handleOpenBoard = () => {
+    setAddNewBoard(true);
+  };
+  const handleCloseBoard = () => {
+    setAddNewBoard(false);
+  };
   const data = [
     { title: "Platform Launch", icon: BoardIcon },
     { title: "Marketing Plan", icon: BoardIcon },
     { title: "Marketing Plan", icon: BoardIcon },
     { title: "Roadmap", icon: BoardIcon },
   ];
+
   return (
     <div
       className={`mt-[92px] bg-natural-light-veryLightSideNavCards         
@@ -54,8 +63,11 @@ function SideBar() {
               );
             })}
             <li className="w-full ">
-              <button className="w-full py-3 pl-8  flex flex-row items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:opacity-70">
-                <div className="">
+              <button
+                className="w-full py-3 pl-8  flex flex-row items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:opacity-70"
+                onClick={handleOpenBoard}
+              >
+                <div>
                   <img
                     src={BoardIcon}
                     className="object-contain"
@@ -66,6 +78,9 @@ function SideBar() {
               </button>
             </li>
           </ul>
+          {openNewBoard && (
+            <AddNewBoard isOpen={openNewBoard} handleClose={handleCloseBoard} />
+          )}
         </div>
         <div className="w-9/12 flex flex-row justify-between items-center gap-4 bg-neutral-light-veryLightMain py-4 px-7 rounded-md mx-auto">
           <div>
@@ -87,6 +102,7 @@ function SideBar() {
         <div
           className={`flex flex-row justify-start items-center gap-4 mx-auto mb-4 hover:transition-all hover:duration-200 hover:opacity-70`}
         >
+          {/* hide sidebar */}
           {/* <button
             className={`flex flex-row justify-start items-center gap-4 mx-auto font-bold text-neutral-light-ContentText`}
             onClick={handleOpen}
