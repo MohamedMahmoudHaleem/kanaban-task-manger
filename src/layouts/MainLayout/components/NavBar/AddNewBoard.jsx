@@ -9,21 +9,32 @@ function AddNewBoard({ isOpen, handleClose }) {
   };
   return (
     <Modal isOpen={isOpen} closeModal={handleClose}>
-      <div className='p-4' >
-        <h1>Add New Board</h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="">
+        <h1
+          className="text-neutral-light-mainText text-xl font-bold mb-7
+        "
+        >
+          Add New Board
+        </h1>
+        <form onSubmit={handleSubmit(onSubmit)} className="">
           {/* <label htmlFor="name">Name</label>
           <input
             type="text"
             {...register("name", { required: "Title is required" })}
           /> */}
-          <TextInput label="Name"   {...register("name", { required: "Title is required" })} />
-          <label htmlFor="columns">Columns</label>
-          <input
-            type="text"
-            {...register("columns", { required: "Columns is required" })}
+          <TextInput
+            className="mb-4"
+            label="Name"
+            {...register("name", { required: "Title is required" })}
           />
-          <button type="submit">Create New Board</button>
+          <TextInput
+            className="mb-4"
+            label="columns"
+            {...register("columns", { required: "columns is required" })}
+          />
+
+          <button type="submit" className='mx-auto w-full mt-4 bg-neutral-dark-backgroundSideNav rounded-3xl text-white font-semibold
+           h-10 hover:bg-primary-btnHover' >Create New Board</button>
         </form>
       </div>
     </Modal>
