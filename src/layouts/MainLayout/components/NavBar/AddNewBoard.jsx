@@ -1,10 +1,16 @@
 import { useForm } from "react-hook-form";
 import Modal from "../../../../components/modal.jsx";
 import TextInput from "../../../../components/TextInput.jsx";
+import { useState } from "react";
 function AddNewBoard({ isOpen, handleClose }) {
   const { register, handleSubmit, reset } = useForm();
+  const [boards, setBoards] = useState(
+    JSON.parse(localStorage.getItem("boards")) || []
+  );
 
   const onSubmit = (data) => {
+    localStorage.setItem("newBoard", JSON.stringify([...boards, data]));
+    setBoards((prev) => [...prev, data]);
     reset();
   };
   return (
@@ -33,8 +39,13 @@ function AddNewBoard({ isOpen, handleClose }) {
             {...register("columns", { required: "columns is required" })}
           />
 
-          <button type="submit" className='mx-auto w-full mt-4 bg-neutral-dark-backgroundSideNav rounded-3xl text-white font-semibold
-           h-10 hover:bg-primary-btnHover' >Create New Board</button>
+          <button
+            type="submit"
+            className="mx-auto w-full mt-4 bg-neutral-dark-backgroundSideNav rounded-3xl text-white font-semibold
+           h-10 hover:bg-primary-btnHover"
+          >
+            Create New Board
+          </button>
         </form>
       </div>
     </Modal>
