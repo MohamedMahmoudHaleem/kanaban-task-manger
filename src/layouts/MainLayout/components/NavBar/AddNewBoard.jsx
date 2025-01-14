@@ -7,7 +7,7 @@ function AddNewBoard({ isOpen, handleClose }) {
   const { register, handleSubmit, reset } = useForm();
   const { boards, setBoards } = useContext(kanbanContext);
 
-  const onSubmit = (data) => {
+  const onSubmit = (data) => {    
     localStorage.setItem("newBoard", JSON.stringify([...boards, data]));
     setBoards((prev) => [...prev, data]);
     reset();

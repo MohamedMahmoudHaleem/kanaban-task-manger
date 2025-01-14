@@ -16,15 +16,7 @@ function SideBar() {
     handleCloseBoard,
     boards,
     
-  } = useContext(kanbanContext);
-  console.log("✌️ ~ SideBar11 ~ boards:", boards);
-
-  // const boards = [
-  //   { title: "Platform Launch", icon: BoardIcon },
-  //   { title: "Marketing Plan", icon: BoardIcon },
-  //   { title: "Marketing Plan", icon: BoardIcon },
-  //   { title: "Roadmap", icon: BoardIcon },
-  // ];
+  } = useContext(kanbanContext); 
 
   return (
     <div
@@ -50,7 +42,7 @@ function SideBar() {
             {boards.map((element, index) => {
               return (
                 <li key={index} className="w-full group ">
-                  <button className="w-full pr-20 py-3 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:rounded-l-none">
+                  <button className="w-full pr-20 py-3 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none">
                     {/* <BoardIcon /> */}
                     <div className="">
                       <img
