@@ -9,7 +9,6 @@ export default function App() {
   function handleOpenSideBar() {
     setOpenSideBar(!openSideBar);
   }
-
   //Create New Board .
   const [openNewBoard, setAddNewBoard] = useState(false);
   const handleOpenBoard = () => {
@@ -19,6 +18,11 @@ export default function App() {
     setAddNewBoard(false);
   };
 
+  //add newBoard data
+  const [boards, setBoards] = useState(
+    JSON.parse(localStorage.getItem("newBoard")) || []
+  );
+
   return (
     <kanbanContext.Provider
       value={{
@@ -27,6 +31,8 @@ export default function App() {
         openNewBoard,
         handleOpenBoard,
         handleCloseBoard,
+        boards,
+        setBoards,
       }}
     >
       <MainLayout>

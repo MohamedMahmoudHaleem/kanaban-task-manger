@@ -1,5 +1,3 @@
-
-
 const Modal = ({ isOpen, closeModal, children }) => {
   return (
     <div

@@ -14,15 +14,17 @@ function SideBar() {
     openNewBoard,
     handleOpenBoard,
     handleCloseBoard,
+    boards,
+    
   } = useContext(kanbanContext);
-  // console.log("✌️ ~ handleOpen ~ open:", open);
+  console.log("✌️ ~ SideBar11 ~ boards:", boards);
 
-  const data = [
-    { title: "Platform Launch", icon: BoardIcon },
-    { title: "Marketing Plan", icon: BoardIcon },
-    { title: "Marketing Plan", icon: BoardIcon },
-    { title: "Roadmap", icon: BoardIcon },
-  ];
+  // const boards = [
+  //   { title: "Platform Launch", icon: BoardIcon },
+  //   { title: "Marketing Plan", icon: BoardIcon },
+  //   { title: "Marketing Plan", icon: BoardIcon },
+  //   { title: "Roadmap", icon: BoardIcon },
+  // ];
 
   return (
     <div
@@ -45,19 +47,19 @@ function SideBar() {
             ALL BOARDS (3)
           </p>
           <ul className="flex flex-col gap-4 py-4 items-start w-full ">
-            {data.map((element, index) => {
+            {boards.map((element, index) => {
               return (
                 <li key={index} className="w-full group ">
                   <button className="w-full pr-20 py-3 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:rounded-l-none">
                     {/* <BoardIcon /> */}
                     <div className="">
                       <img
-                        src={element.icon}
+                        src={BoardIcon}
                         className="object-contain"
                         alt="boardIcon"
                       />
                     </div>
-                    {element.title}
+                    {element.name}
                   </button>
                 </li>
               );
