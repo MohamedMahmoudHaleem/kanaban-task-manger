@@ -2,15 +2,15 @@
 import BoardIcon from "../../../../assets/icon-board.svg";
 import DarkIcon from "../../../../assets/icon-dark-theme.svg";
 import LightIcon from "../../../../assets/icon-light-theme.svg";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { kanbanContext } from "../../../../Context/kanbanContext.jsx";
 import AddNewBoard from "../NavBar/AddNewBoard.jsx";
-import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
-// import ButtonCollapse from "./ButtonColapse.jsx";
+// import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
+// import ButtonCollapse from "./ButtonCollapse.jsx";
 function SideBar() {
   const {
     openSideBar,
-    handleOpenSideBar,
+    // handleOpenSideBar,
     openNewBoard,
     handleOpenBoard,
     handleCloseBoard,
