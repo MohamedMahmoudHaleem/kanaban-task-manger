@@ -8,15 +8,15 @@ import AddNewBoard from "../NavBar/AddNewBoard.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 // import ButtonCollapse from "./ButtonColapse.jsx";
 function SideBar() {
-  const { open, handleOpen } = useContext(kanbanContext);
+  const {
+    openSideBar,
+    handleOpenSideBar,
+    openNewBoard,
+    handleOpenBoard,
+    handleCloseBoard,
+  } = useContext(kanbanContext);
   // console.log("✌️ ~ handleOpen ~ open:", open);
-  const [openNewBoard, setAddNewBoard] = useState(false);
-  const handleOpenBoard = () => {
-    setAddNewBoard(true);
-  };
-  const handleCloseBoard = () => {
-    setAddNewBoard(false);
-  };
+
   const data = [
     { title: "Platform Launch", icon: BoardIcon },
     { title: "Marketing Plan", icon: BoardIcon },
@@ -28,14 +28,14 @@ function SideBar() {
     <div
       className={`mt-[92px] bg-natural-light-veryLightSideNavCards         
           ${
-            open
+            openSideBar
               ? " w-[370px]"
               : "w-0 overflow-hidden transition-all duration-700 ease-in-out "
           }`}
     >
       <div
         className={`${
-          open
+          openSideBar
             ? "flex flex-col mt-7 items-start justify-between min-h-[90%]"
             : "hidden"
         }`}
@@ -105,7 +105,7 @@ function SideBar() {
           {/* hide sidebar */}
           {/* <button
             className={`flex flex-row justify-start items-center gap-4 mx-auto font-bold text-neutral-light-ContentText`}
-            onClick={handleOpen}
+            onClick={handleOpenSideBar}
           >
             <div>
               <img src={HideIcon} alt="hideIcon" />

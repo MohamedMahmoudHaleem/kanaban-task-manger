@@ -5,18 +5,28 @@ import Board from "./pages/Board .jsx";
 
 export default function App() {
   //toggle sidebar
-  const [open, setOpen] = useState(true);
+  const [openSideBar, setOpenSideBar] = useState(true);
+  function handleOpenSideBar() {
+    setOpenSideBar(!openSideBar);
+  }
 
   //Create New Board .
+  const [openNewBoard, setAddNewBoard] = useState(false);
+  const handleOpenBoard = () => {
+    setAddNewBoard(true);
+  };
+  const handleCloseBoard = () => {
+    setAddNewBoard(false);
+  };
 
-  function handleOpen() {
-    setOpen(!open);
-  }
   return (
     <kanbanContext.Provider
       value={{
-        open,
-        handleOpen,
+        openSideBar,
+        handleOpenSideBar,
+        openNewBoard,
+        handleOpenBoard,
+        handleCloseBoard,
       }}
     >
       <MainLayout>
