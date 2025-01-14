@@ -2,11 +2,17 @@ import { useContext } from "react";
 import { kanbanContext } from "../Context/kanbanContext.jsx";
 import AddNewBoard from "../layouts/MainLayout/components/NavBar/AddNewBoard.jsx";
 import { getRequest } from "../services/network.js";
+import { useQuery } from "@tanstack/react-query";
 
 function Board() {
   const { openNewBoard, handleOpenBoard, handleCloseBoard, boards } =
     useContext(kanbanContext);
-  console.log("boards in  ", boards);
+
+  const { data, isPending, error } = useQuery({
+    queryKey: ["todo"],
+    queryFn: getRequest,
+  });
+  console.log("todo", data);
   return (
     <div className="mt-20 min-h-full bg-neutral-light-veryLightMain w-full  ">
       <div
@@ -28,9 +34,15 @@ function Board() {
           <div className="flex flex-col gap-3">
             <div className="flex flex-row gap-2 justify-start items-center">
               <span className="rounded-full w-3 h-3 bg-red-900"></span>
-              <span className="text-[#a3acba] font-semibold tracking-wide">ONe</span>
+              <span className="text-[#a3acba] font-semibold tracking-wide">
+                ONe
+              </span>
             </div>
-            <div className="w-72 min-h-[75vh] border-[2px] border-opacity-60 border-neutral-light-darkGrayishBlue border-dashed rounded-md "></div>
+            <div className="w-72 min-h-[75vh] border-[2px] border-opacity-60 border-neutral-light-darkGrayishBlue border-dashed rounded-md ">
+              {data?.todos.map((item, index) => (
+                <div key={index}>{item.todo}</div>
+              ))}
+            </div>
           </div>
           <div className="w-72 min-h-[75vh] self-stretch mt-9 from-[#cad5e5] to-slate-100">
             <button className="w-full min-h-full rounded-md bg-gradient-to-b text-[#4e545e] font-bold text-2xl text-opacity-60 hover:text-primary-brightBlue ">
