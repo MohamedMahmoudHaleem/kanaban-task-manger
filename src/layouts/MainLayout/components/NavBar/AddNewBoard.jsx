@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import Modal from "../../../../components/modal.jsx";
+import Modal from "../../../../components/Modal.jsx";
 import TextInput from "../../../../components/TextInput.jsx";
 import { useContext } from "react";
 import { kanbanContext } from "../../../../Context/kanbanContext.jsx";
