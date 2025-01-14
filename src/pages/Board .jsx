@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { kanbanContext } from "../Context/kanbanContext.jsx";
 import AddNewBoard from "../layouts/MainLayout/components/NavBar/AddNewBoard.jsx";
+import { getRequest } from "../services/network.js";
 
 function Board() {
   const { openNewBoard, handleOpenBoard, handleCloseBoard, boards } =
