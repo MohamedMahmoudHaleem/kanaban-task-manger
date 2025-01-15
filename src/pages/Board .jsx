@@ -19,6 +19,7 @@ function Board() {
         "
       >
         {/* main layout before fetch data  */}
+        
         {/* <p className="font-medium text-base text-center ">
           This board is empty. Create a new column to get started.
         </p>

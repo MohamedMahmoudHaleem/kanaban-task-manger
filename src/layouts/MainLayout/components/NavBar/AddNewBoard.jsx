@@ -11,6 +11,7 @@ function AddNewBoard({ isOpen, handleClose }) {
     localStorage.setItem("newBoard", JSON.stringify([...boards, data]));
     setBoards((prev) => [...prev, data]);
     reset();
+    handleClose();
   };
   return (
     <Modal isOpen={isOpen} closeModal={handleClose}>
