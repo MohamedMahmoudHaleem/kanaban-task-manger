@@ -18,6 +18,7 @@ function Board() {
         className="min-h-full  flex flex-col items-center  justify-center gap-4
         "
       >
+        {/* main layout before fetch data  */}
         {/* <p className="font-medium text-base text-center ">
           This board is empty. Create a new column to get started.
         </p>
@@ -29,7 +30,8 @@ function Board() {
           + Create New Board
         </button> */}
 
-        <div className="max-h-[75vh] flex flex-row gap-11 self-start mx-11 items-center overflow-hidden">
+        {/* design the + New column and fetch data  */}
+        {/* <div className="max-h-[75vh] flex flex-row gap-11 self-start mx-11 items-center overflow-hidden">
           <div className="flex flex-col gap-3">
             <div className="flex flex-row gap-2 justify-start items-center">
               <span className="rounded-full w-3 h-3 bg-red-900"></span>
@@ -39,7 +41,9 @@ function Board() {
             </div>
             <div className="w-72 max-h-[75vh] overflow-y-scroll border-[2px] border-opacity-60 border-neutral-light-darkGrayishBlue border-dashed rounded-md ">
               {data?.todos.map((item, index) => (
-                <div key={index}>{item.todo}</div>
+                <div className="border-b-2 p-1 m-1 " key={index}>
+                  {item.todo}
+                </div>
               ))}
             </div>
           </div>
@@ -48,9 +52,8 @@ function Board() {
               + New Column
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
-
       {openNewBoard && (
         <AddNewBoard isOpen={openNewBoard} handleClose={handleCloseBoard} />
       )}
