@@ -19,12 +19,8 @@ function SideBar() {
 
   return (
     <div
-      className={`mt-[92px] bg-natural-light-veryLightSideNavCards         
-          ${
-            openSideBar
-              ? " w-[370px]"
-              : "w-0 overflow-hidden transition-all duration-700 ease-in-out "
-          }`}
+      className={`mt-[92px] bg-natural-light-veryLightSideNavCards transition-all duration-700 ease-in-out         
+          ${openSideBar ? " w-[370px]" : "w-0 overflow-hidden"}`}
     >
       <div
         className={`${
@@ -37,7 +33,7 @@ function SideBar() {
           <p className="text-sm ml-7 place-self-start text-neutral-light-ContentText font-semibold tracking-widest">
             ALL BOARDS (3)
           </p>
-          <ul className="flex flex-col gap-4 py-4 items-start w-full ">
+          <ul className="flex flex-col gap-2 py-3 items-start w-full ">
             {boards.map((element, index) => {
               return (
                 <li key={index} className="w-full group ">
@@ -57,7 +53,7 @@ function SideBar() {
             })}
             <li className="w-full ">
               <button
-                className="w-full py-3 pl-8  flex flex-row items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:opacity-70"
+                className="w-full py-3 pl-8  flex flex-row items-center justify-start gap-3  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:opacity-70"
                 onClick={handleOpenBoard}
               >
                 <div>
@@ -75,7 +71,7 @@ function SideBar() {
             <AddNewBoard isOpen={openNewBoard} handleClose={handleCloseBoard} />
           )}
         </div>
-        <div className="w-9/12 flex flex-row justify-between items-center gap-4 bg-neutral-light-veryLightMain py-4 px-7 rounded-md mx-auto">
+        <div className="w-[60%] ml-7 flex flex-row justify-between items-center  bg-neutral-light-veryLightMain py-4 px-7 rounded-md ">
           <div>
             <img src={DarkIcon} alt="darkIcon" />
           </div>
@@ -93,7 +89,7 @@ function SideBar() {
           </div>
         </div>
         <div
-          className={`flex flex-row justify-start items-center gap-4 mx-auto mb-4 hover:transition-all hover:duration-200 hover:opacity-70`}
+          className={`flex flex-row justify-start items-center gap-4 mt-5 m-16 mb-4 hover:transition-all hover:duration-200 hover:opacity-70`}
         >
           {/* hide sidebar */}
           <button
