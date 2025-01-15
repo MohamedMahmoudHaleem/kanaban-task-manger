@@ -23,8 +23,7 @@ function SideBar() {
           ${
             openSideBar
               ? " w-[370px]"
-              : // : "transition-all duration-500 ease-in-out w-0 overflow-hidden "
-                "w-0 overflow-hidden transition-all duration-700 ease-in-out "
+              : "w-0 overflow-hidden transition-all duration-700 ease-in-out "
           }`}
     >
       <div
