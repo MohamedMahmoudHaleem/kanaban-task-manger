@@ -1,7 +1,7 @@
 import NavBar from "./components/NavBar/NavBar.jsx";
 import SideBar from "./components/SideBar/SideBar.jsx";
 import { KanbanProvider } from "../../Context/kanbanContext.jsx";
-import Board from "../../pages/Board .jsx";
+import Board from "../../pages/Board/Board .jsx";
 
 function MainLayout() {
   return (

@@ -5,14 +5,17 @@ import { useKanban } from "../../../../Context/kanbanContext.jsx";
 
 function AddNewBoard({ isOpen, handleClose }) {
   const { register, handleSubmit, reset } = useForm();
-  const { boards, setBoards } = useKanban();
+  const { boards, setBoards } = useKanban([]);
 
   const onSubmit = (data) => {
+    data.id = boards.length + 1;
     localStorage.setItem("newBoard", JSON.stringify([...boards, data]));
     setBoards((prev) => [...prev, data]);
     reset();
     handleClose();
   };
+  console.log("✌️ ~ AddNewBoard ~ boards:", boards);
+
   return (
     <Modal isOpen={isOpen} closeModal={handleClose}>
       <div className="">

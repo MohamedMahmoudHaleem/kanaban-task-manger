@@ -5,6 +5,7 @@ import LightIcon from "../../../../assets/icon-light-theme.svg";
 import AddNewBoard from "../NavBar/AddNewBoard.jsx";
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
+import { useSearchParams } from "react-router";
 // import ButtonCollapse from "./ButtonCollapse.jsx";
 function SideBar() {
   const {
@@ -16,7 +17,16 @@ function SideBar() {
     boards,
   } = useKanban();
   console.log("useKanban", useKanban());
+  // const [searchParams, setSearchParams] = useSearchParams();
 
+  function navigateToBoard(id) {
+    console.log("✌️ ~ navigateToBoard ~ id:", id);
+    const url = new URL(window.location.href); // Get the current search parametersconst
+    const searchParams = new URLSearchParams(url.search);
+    searchParams.set("id", id);
+    url.search = searchParams.toString();
+    window.history.pushState({}, "", url.toString());
+  }
   return (
     <div
       className={`mt-[92px] bg-natural-light-veryLightSideNavCards          
@@ -41,7 +51,10 @@ function SideBar() {
             {boards.map((element, index) => {
               return (
                 <li key={index} className="w-full group ">
-                  <button className="w-full pr-20 py-2 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none">
+                  <button
+                    className="w-full pr-20 py-2 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none"
+                    onClick={() => navigateToBoard(element.id)}
+                  >
                     {/* <BoardIcon /> */}
                     <div className="">
                       <img

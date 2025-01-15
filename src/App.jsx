@@ -4,7 +4,7 @@ import {
   useQuery,
 } from "@tanstack/react-query";
 import MainLayout from "./layouts/MainLayout/MainLayout.jsx";
-import Board from "./pages/Board .jsx";
+import Board from "./pages/Board/Board .jsx";
 
 export default function App() {
   const queryClient = new QueryClient();
