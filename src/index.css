@@ -21,4 +21,7 @@ body {
     @apply bg-primary-brightBlue text-neutral-light-veryLightSideNavCards  rounded-full 
     hover:bg-primary-btnHover;
   }
+  .card {
+    @apply bg-neutral-light-veryLightSideNavCards rounded-md p-4 w-96 h-32 shadow-md hover:bg-neutral-dark-backgroundSideNavHover;
+  }
 }

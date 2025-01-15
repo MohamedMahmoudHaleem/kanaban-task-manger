@@ -29,7 +29,7 @@ function Board() {
           + Create New Board
         </button> */}
 
-        <div className="min-h-[75vh] flex flex-row gap-11 self-start mx-11 items-center">
+        <div className="max-h-[75vh] flex flex-row gap-11 self-start mx-11 items-center overflow-hidden">
           <div className="flex flex-col gap-3">
             <div className="flex flex-row gap-2 justify-start items-center">
               <span className="rounded-full w-3 h-3 bg-red-900"></span>
@@ -37,7 +37,7 @@ function Board() {
                 ONe
               </span>
             </div>
-            <div className="w-72 min-h-[75vh] border-[2px] border-opacity-60 border-neutral-light-darkGrayishBlue border-dashed rounded-md ">
+            <div className="w-72 max-h-[75vh] overflow-y-scroll border-[2px] border-opacity-60 border-neutral-light-darkGrayishBlue border-dashed rounded-md ">
               {data?.todos.map((item, index) => (
                 <div key={index}>{item.todo}</div>
               ))}
