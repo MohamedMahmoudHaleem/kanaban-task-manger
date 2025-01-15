@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { kanbanContext } from "../../../../Context/kanbanContext.jsx";
+import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 function ButtonCollapse() {
-  const { handleOpen } = useContext(kanbanContext);
+  const { handleOpen } = useKanban();
   return (
     <div
       className={`flex flex-row justify-start items-center gap-4 mx-auto mb-4 hover:transition-all hover:duration-200 hover:opacity-70`}

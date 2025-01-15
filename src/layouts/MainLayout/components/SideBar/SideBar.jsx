@@ -2,21 +2,20 @@
 import BoardIcon from "../../../../assets/icon-board.svg";
 import DarkIcon from "../../../../assets/icon-dark-theme.svg";
 import LightIcon from "../../../../assets/icon-light-theme.svg";
-import { useContext } from "react";
-import { kanbanContext } from "../../../../Context/kanbanContext.jsx";
 import AddNewBoard from "../NavBar/AddNewBoard.jsx";
-// import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
+import { useKanban } from "../../../../Context/kanbanContext.jsx";
+import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 // import ButtonCollapse from "./ButtonCollapse.jsx";
 function SideBar() {
   const {
     openSideBar,
-    // handleOpenSideBar,
+    handleOpenSideBar,
     openNewBoard,
     handleOpenBoard,
     handleCloseBoard,
     boards,
-    
-  } = useContext(kanbanContext); 
+  } = useKanban();
+  console.log("useKanban", useKanban());
 
   return (
     <div
@@ -42,7 +41,7 @@ function SideBar() {
             {boards.map((element, index) => {
               return (
                 <li key={index} className="w-full group ">
-                  <button className="w-full pr-20 py-3 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none">
+                  <button className="w-full pr-20 py-2 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none">
                     {/* <BoardIcon /> */}
                     <div className="">
                       <img
@@ -97,7 +96,7 @@ function SideBar() {
           className={`flex flex-row justify-start items-center gap-4 mx-auto mb-4 hover:transition-all hover:duration-200 hover:opacity-70`}
         >
           {/* hide sidebar */}
-          {/* <button
+          <button
             className={`flex flex-row justify-start items-center gap-4 mx-auto font-bold text-neutral-light-ContentText`}
             onClick={handleOpenSideBar}
           >
@@ -105,7 +104,7 @@ function SideBar() {
               <img src={HideIcon} alt="hideIcon" />
             </div>
             Hide SideBar
-          </button> */}
+          </button>
         </div>
       </div>
     </div>

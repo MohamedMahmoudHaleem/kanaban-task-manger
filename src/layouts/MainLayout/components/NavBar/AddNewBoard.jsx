@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form";
 import Modal from "../../../../components/Modal.jsx";
 import TextInput from "../../../../components/TextInput.jsx";
-import { useContext } from "react";
-import { kanbanContext } from "../../../../Context/kanbanContext.jsx";
+import { useKanban } from "../../../../Context/kanbanContext.jsx";
+
 function AddNewBoard({ isOpen, handleClose }) {
   const { register, handleSubmit, reset } = useForm();
-  const { boards, setBoards } = useContext(kanbanContext);
+  const { boards, setBoards } = useKanban();
 
-  const onSubmit = (data) => {    
+  const onSubmit = (data) => {
     localStorage.setItem("newBoard", JSON.stringify([...boards, data]));
     setBoards((prev) => [...prev, data]);
     reset();

@@ -1,12 +1,11 @@
-import { useContext } from "react";
-import { kanbanContext } from "../Context/kanbanContext.jsx";
 import AddNewBoard from "../layouts/MainLayout/components/NavBar/AddNewBoard.jsx";
 import { getRequest } from "../services/network.js";
+import { useKanban } from "../Context/kanbanContext.jsx";
 import { useQuery } from "@tanstack/react-query";
 
 function Board() {
   const { openNewBoard, handleOpenBoard, handleCloseBoard, boards } =
-    useContext(kanbanContext);
+    useKanban();
 
   const { data, isPending, error } = useQuery({
     queryKey: ["todo"],
