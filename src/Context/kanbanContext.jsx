@@ -5,7 +5,7 @@ const kanbanContext = createContext();
 function KanbanProvider({ children }) {
   const [openSideBar, setOpenSideBar] = useState(true);
   function handleOpenSideBar() {
-    setOpenSideBar((open) => !open);
+    setOpenSideBar(!openSideBar);
   }
   //Create New Board .
   const [openNewBoard, setAddNewBoard] = useState(false);
