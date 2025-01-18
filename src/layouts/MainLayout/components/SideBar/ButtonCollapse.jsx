@@ -1,10 +1,12 @@
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 function ButtonCollapse() {
-  const { handleOpenSideBar } = useKanban();
+  const { handleOpenSideBar, openSideBar } = useKanban();
   return (
     <div
-      className="fixed top-0 left-0 flex flex-row justify-end -ml-5 p-2 items-center w-[70px] h-10 btn  cursor-pointer rounded-full  hover:transition-all hover:duration-200 hover:opacity-70"
+      className={`transition-all duration-900 ease-in-out fixed top-[87%] left-0 flex flex-row justify-end -ml-4 p-3 items-center w-[75px] h-10 btn  cursor-pointer rounded-full      
+      hover:transition-all hover:duration-200 hover:opacity-70
+      `}
       onClick={handleOpenSideBar}
     >
       {/* hide sidebar */}

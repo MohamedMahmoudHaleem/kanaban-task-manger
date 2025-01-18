@@ -9,7 +9,7 @@ function Layout() {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-row min-h-screen overflow-hidden transition-all duration-700 ease-in-out">
+      <div className="flex flex-row min-h-screen overflow-hidden ">
         {openSideBar ? <SideBar /> : <ButtonCollapse />}
         <Board />
       </div>

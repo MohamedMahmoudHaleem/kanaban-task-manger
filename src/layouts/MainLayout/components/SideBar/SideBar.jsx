@@ -29,15 +29,15 @@ function SideBar() {
   }
   return (
     <div
-      className={`mt-[92px] bg-natural-light-veryLightSideNavCards          
+      className={` mt-[92px] bg-natural-light-veryLightSideNavCards transition-all duration-1000 ease-in-out           
           ${
             openSideBar
-              ? " w-[370px]"
-              : "w-0 overflow-hidden transition-all duration-700 ease-in-out "
+              ? "w-[370px] border-r-[1px] border-black-100 "
+              : "w-0 overflow-hidden "
           }`}
     >
       <div
-        className={`${
+        className={`transition-all duration-700 ease-in-out ${
           openSideBar
             ? "flex flex-col mt-7 items-start justify-between min-h-[90%]"
             : "hidden"
@@ -45,7 +45,7 @@ function SideBar() {
       >
         <div>
           <p className="text-sm ml-7 place-self-start text-neutral-light-ContentText font-semibold tracking-widest">
-            ALL BOARDS (3)
+            ALL BOARDS ({boards.length})
           </p>
           <ul className="flex flex-col gap-2 py-3 items-start w-full ">
             {boards.map((element, index) => {
