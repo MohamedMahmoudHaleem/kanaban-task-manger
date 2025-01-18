@@ -7,6 +7,13 @@ function KanbanProvider({ children }) {
   function handleOpenSideBar() {
     setOpenSideBar(!openSideBar);
   }
+  const [openEditCard, setOpenCard] = useState(false);
+  function handleEditCard() {
+    setOpenCard(!openEditCard);
+  }
+  function handleCloseEditCard() {
+    setOpenCard(false);
+  }
   //Create New Board .
   const [openNewBoard, setAddNewBoard] = useState(false);
   const handleOpenBoard = () => {
@@ -25,6 +32,9 @@ function KanbanProvider({ children }) {
       value={{
         openSideBar,
         handleOpenSideBar,
+        openEditCard,
+        handleEditCard,
+        handleCloseEditCard,
         openNewBoard,
         handleOpenBoard,
         handleCloseBoard,
