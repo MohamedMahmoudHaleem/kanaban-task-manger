@@ -52,7 +52,7 @@ function SideBar() {
               return (
                 <li key={index} className="w-full group ">
                   <button
-                    className="w-full pr-20 py-2 pl-8  flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none"
+                    className="w-full py-2 pl-8 flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none"
                     onClick={() => navigateToBoard(element.id)}
                   >
                     {/* <BoardIcon /> */}

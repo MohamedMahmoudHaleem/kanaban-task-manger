@@ -15,7 +15,6 @@ function KanbanProvider({ children }) {
   const handleCloseBoard = () => {
     setAddNewBoard(false);
   };
-
   //add newBoard data
   const [boards, setBoards] = useState(
     JSON.parse(localStorage.getItem("newBoard")) || []

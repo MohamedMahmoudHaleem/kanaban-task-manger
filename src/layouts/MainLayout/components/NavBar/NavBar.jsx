@@ -1,7 +1,7 @@
 import VerticalIcon from "../../../../assets/icon-vertical-ellipsis.svg";
 import logo from "../../../../assets/logo-mobile.svg";
 import { useToggle } from "../../../../components/UseToggle.jsx";
-import EditedBoard from "../Utility compontest/EditedBoard.jsx";
+import EditedBoard from "../utilityComponents/EditedBoard.jsx";
 function NavBar() {
   const [isOpen, handleToggle] = useToggle(false);
   return (
