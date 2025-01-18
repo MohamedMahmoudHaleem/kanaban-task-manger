@@ -1,9 +1,9 @@
 import VerticalIcon from "../../../../assets/icon-vertical-ellipsis.svg";
 import logo from "../../../../assets/logo-mobile.svg";
-import { useKanban } from "../../../../Context/kanbanContext.jsx";
+import { useToggle } from "../../../../components/UseToggle.jsx";
 import EditedBoard from "../Utility compontest/EditedBoard.jsx";
 function NavBar() {
-  const { openEditCard, handleOpenEditCard } = useKanban();
+  const [isOpen, handleToggle] = useToggle(false);
   return (
     <div className="fixed top-0 left-0 w-full bg-neutral-light-veryLightSideNavCards flex flex-row items-center  border-b-[1px] border-black-100 gap-8 pr-3 ">
       <div className="flex flex-row gap-3 items-center p-7 pl-8 border-r-[1px] border-black-100 w-[365px]">
@@ -22,11 +22,11 @@ function NavBar() {
           <div
             className="cursor-pointer mr-3 w-6 h-10 flex items-center justify-center rounded-full hover:bg-primary-btnHover hover:bg-opacity-30 hover:transition-all hover:duration-150
           "
-            onClick={handleOpenEditCard}
+            onClick={handleToggle}
           >
             <img src={VerticalIcon} alt="vertical" className="" />
           </div>
-          {openEditCard && <EditedBoard />}
+          {isOpen && <EditedBoard />}
         </div>
       </div>
     </div>
