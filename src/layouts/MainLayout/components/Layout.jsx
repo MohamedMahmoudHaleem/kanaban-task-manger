@@ -7,14 +7,14 @@ import SideBar from "./SideBar/SideBar.jsx";
 
 function Layout() {
   const { openSideBar } = useKanban();
-  useEffect(() => {
-    const url = new URL(window.location.href);
-    // Check if the URL contains the 'id' parameter and remove it
-    if (url.searchParams.has("id")) {
-      url.searchParams.delete("id");
-      window.history.replaceState({}, "", url.toString());
-    }
-  }, []);
+  // useEffect(() => {
+  //   const url = new URL(window.location.href);
+  //   // Check if the URL contains the 'id' parameter and remove it
+  //   if (url.searchParams.has("id")) {
+  //     url.searchParams.delete("id");
+  //     window.history.replaceState({}, "", url.toString());
+  //   }
+  // }, []);
   return (
     <div>
       <NavBar />

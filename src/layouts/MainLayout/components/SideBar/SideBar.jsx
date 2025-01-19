@@ -5,6 +5,7 @@ import LightIcon from "../../../../assets/icon-light-theme.svg";
 import AddNewBoard from "../NavBar/AddNewBoard.jsx";
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
+import { useEffect } from "react";
 // import { useSearchParams } from "react-router";
 // import ButtonCollapse from "./ButtonCollapse.jsx";
 function SideBar() {
@@ -19,6 +20,14 @@ function SideBar() {
   // console.log("useKanban", useKanban());
   // const [searchParams, setSearchParams] = useSearchParams();
 
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    // Check if the URL contains the 'id' parameter and remove it
+    if (url.searchParams.has("id")) {
+      url.searchParams.delete("id");
+      window.history.replaceState({}, "", url.toString());
+    }
+  }, []);
   function navigateToBoard(id) {
     console.log("✌️ ~ navigateToBoard ~ id:", id);
     const url = new URL(window.location.href); // Get the current search parametersconst
