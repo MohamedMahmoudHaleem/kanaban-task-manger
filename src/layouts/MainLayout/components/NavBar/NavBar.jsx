@@ -17,7 +17,7 @@ function NavBar({ onFetchData }) {
     >
       <div
         className="flex flex-row gap-3 items-center p-7 pl-8 border-r-[.5px] border-black-100 w-[365px]        
-      dark:border-r-gray-600 "
+      dark:border-r-gray-600  ease-in-out"
       >
         <div className="w-6 h-6">
           <img src={logo} alt="icon" className="object-contain" />

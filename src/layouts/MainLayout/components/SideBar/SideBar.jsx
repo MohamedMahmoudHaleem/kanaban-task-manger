@@ -6,7 +6,6 @@ import AddNewBoard from "../NavBar/AddNewBoard.jsx";
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 import { useEffect } from "react";
-import { set } from "react-hook-form";
 // import { useSearchParams } from "react-router";
 // import ButtonCollapse from "./ButtonCollapse.jsx";
 function SideBar() {
