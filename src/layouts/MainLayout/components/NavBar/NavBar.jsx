@@ -3,9 +3,11 @@ import logo from "../../../../assets/logo-mobile.svg";
 // import { useToggle } from "../../../../components/UseToggle.jsx";
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import EditedBoard from "../utilityComponents/EditedBoard.jsx";
-function NavBar() {
+function NavBar({ onFetchData }) {
   // const [isOpen, handleToggle] = useToggle(false);
+
   const { openEditCard, handleEditCard } = useKanban();
+
   return (
     <div className="fixed top-0 left-0 w-full bg-neutral-light-veryLightSideNavCards flex flex-row items-center  border-b-[1px] border-black-100 gap-8 pr-3 ">
       <div className="flex flex-row gap-3 items-center p-7 pl-8 border-r-[1px] border-black-100 w-[365px]">
@@ -17,7 +19,10 @@ function NavBar() {
       <div className="flex flex-row justify-between items-center w-full">
         <h1 className="font-bold text-2xl">Platform Launch</h1>
         <div className="flex flex-row gap-3 justify-center items-center">
-          <button className="btn p-3 w-40 text-base font-semibold hover:transition-all hover:duration-150 ">
+          <button
+            className="btn p-3 w-40 text-base font-semibold hover:transition-all hover:duration-150 "
+            onClick={onFetchData}
+          >
             {" "}
             + Add New Task
           </button>
