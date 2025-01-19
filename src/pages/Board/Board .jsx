@@ -3,7 +3,7 @@ import { getRequest } from "../../services/network.js";
 import { useKanban } from "../../Context/kanbanContext.jsx";
 import { useQuery } from "@tanstack/react-query";
 import CreateNewBoard from "./components/CreateNewBoard.jsx";
-import BoardReady from "./components/BoardReady.jsx";
+import BoardData from "./components/BoardData.jsx";
 
 function Board({ todo, isLoading, error }) {
   const { openNewBoard, handleOpenBoard, handleCloseBoard, boards } =
@@ -28,7 +28,7 @@ function Board({ todo, isLoading, error }) {
       >
         {/* main layout before fetch data  */}
 
-        {todo ? <BoardReady todo={todo} /> : <CreateNewBoard />}
+        {todo ? <BoardData todo={todo} /> : <CreateNewBoard />}
       </div>
       {openNewBoard && (
         <AddNewBoard isOpen={openNewBoard} handleClose={handleCloseBoard} />
