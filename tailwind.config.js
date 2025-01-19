@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -24,10 +25,11 @@ export default {
             lightNewColumn: "#E9EFFA",
             darkGrayishBlue: "hsl(236, 9%, 61%)",
             veryDarkGrayishBlue: "hsl(235, 19%, 35%)",
-            
           },
           //dark theme color
           dark: {
+            layout: "#2B2C37",
+            textSideBar: "rgb(130, 143, 163)",
             veryDarkBlueSideNavCards: "#2B2C37",
             veryDarkMain: "#20212C",
             lightText: "hsl(0, 0%, 98%)",

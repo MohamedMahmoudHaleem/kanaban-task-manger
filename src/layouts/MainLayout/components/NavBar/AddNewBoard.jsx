@@ -20,7 +20,7 @@ function AddNewBoard({ isOpen, handleClose }) {
     <Modal isOpen={isOpen} closeModal={handleClose}>
       <div className="">
         <h1
-          className="text-neutral-light-mainText text-xl font-bold mb-7
+          className="text-neutral-light-mainText text-xl font-bold mb-7 dark:text-neutral-light-veryLightSideNavCards
         "
         >
           Add New Board
@@ -32,7 +32,7 @@ function AddNewBoard({ isOpen, handleClose }) {
             {...register("name", { required: "Title is required" })}
           /> */}
           <TextInput
-            className="mb-4"
+            className="mb-4 "
             label="Name"
             {...register("name", { required: "Title is required" })}
           />

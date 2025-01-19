@@ -25,7 +25,7 @@ function Layout() {
       <NavBar onFetchData={handleFetchData}/>
       <div className="flex flex-row min-h-screen overflow-hidden ">
         {openSideBar ? <SideBar /> : <ButtonCollapse />}
-        <Board todo={data} isLoading={isFetching} error={error}/>
+        <Board todo={data} isLoading={isFetching} error={error} />
       </div>
     </div>
   );

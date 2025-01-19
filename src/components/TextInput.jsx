@@ -6,7 +6,7 @@ const TextInput = forwardRef(
       <div className={className}>
         <label
           htmlFor={props?.name}
-          className="block mb-2 text-sm  rounded-sm  text-neutral-light-ContentText font-semibold"
+          className="block mb-2 text-sm  rounded-sm  text-neutral-light-ContentText font-semibold dark:text-neutral-light-veryLightSideNavCards"
         >
           {label}
         </label>
@@ -14,7 +14,7 @@ const TextInput = forwardRef(
           type={type}
           {...props}
           ref={ref}
-          className="border-2 border-neutral-light-darkGrayishBlue w-full rounded-md p-2 outline-none opacity-70"
+          className="border-2 border-neutral-light-darkGrayishBlue w-full rounded-md p-2 outline-none opacity-70 dark:bg-neutral-dark-layout dark:text-neutral-dark-backgroundSideNavHover"
         />
       </div>
     );

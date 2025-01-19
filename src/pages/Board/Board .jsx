@@ -21,7 +21,7 @@ function Board({ todo, isLoading, error }) {
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
   return (
-    <div className="mt-20 min-h-full bg-neutral-light-veryLightMain w-full ">
+    <div className="mt-20 min-h-full transition-all duration-700 ease-in-out bg-neutral-light-veryLightMain w-full dark:bg-neutral-dark-veryDarkMain dark:text-neutral-dark-lightText">
       <div
         className="min-h-full  flex flex-col items-center  justify-center gap-4
         "

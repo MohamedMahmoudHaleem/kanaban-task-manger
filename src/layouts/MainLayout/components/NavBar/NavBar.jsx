@@ -9,8 +9,16 @@ function NavBar({ onFetchData }) {
   const { openEditCard, handleEditCard } = useKanban();
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-neutral-light-veryLightSideNavCards flex flex-row items-center  border-b-[1px] border-black-100 gap-8 pr-3 ">
-      <div className="flex flex-row gap-3 items-center p-7 pl-8 border-r-[1px] border-black-100 w-[365px]">
+    <div
+      className="fixed top-0 left-0 w-full bg-neutral-light-veryLightSideNavCards dark:bg-neutral-dark-layout  dark:text-neutral-light-veryLightSideNavCards
+    transition-all duration-700 ease-in-out
+    flex flex-row items-center  border-b-[1px] border-black-100 gap-8 pr-3 
+    dark:border-b-gray-600 "
+    >
+      <div
+        className="flex flex-row gap-3 items-center p-7 pl-8 border-r-[.5px] border-black-100 w-[365px]        
+      dark:border-r-gray-600 "
+      >
         <div className="w-6 h-6">
           <img src={logo} alt="icon" className="object-contain" />
         </div>

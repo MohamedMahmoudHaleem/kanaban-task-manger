@@ -22,6 +22,6 @@ body {
     hover:bg-primary-btnHover;
   }
   .card {
-    @apply bg-neutral-light-veryLightSideNavCards cursor-pointer rounded-md p-3 w-64 h-24 shadow-md hover:bg-neutral-dark-backgroundSideNavHover;
+    @apply bg-neutral-light-veryLightSideNavCards cursor-pointer rounded-md p-3 w-64 h-24 shadow-md hover:bg-neutral-dark-backgroundSideNavHover dark:bg-neutral-dark-layout dark:text-neutral-light-veryLightSideNavCards;
   }
 }

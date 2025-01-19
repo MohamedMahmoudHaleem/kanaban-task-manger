@@ -2,8 +2,6 @@
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 
 function EditedBoard() {
-
-  
   const { setBoards, boards, handleCloseEditCard } = useKanban();
   console.log("✌️ ~ EditedBoard ~ boards:", boards);
 
@@ -21,7 +19,7 @@ function EditedBoard() {
   }
 
   return (
-    <div className="absolute top-[90px] right-10 py-4 rounded-md bg-neutral-light-veryLightSideNavCards w-48 flex flex-col items-start px-4 gap-2 shadow-md">
+    <div className="absolute top-[82px] right-10 py-5 rounded-md transition-all duration-700 ease-in-outbg-neutral-light-veryLightSideNavCards w-48 flex flex-col dark:bg-neutral-dark-veryDarkMain items-start px-4 gap-2 shadow-md">
       <button className=" hover:opacity-50">Edit Board</button>
       <button className="text-red-600 hover:opacity-50" onClick={deleteBoards}>
         Delete Board

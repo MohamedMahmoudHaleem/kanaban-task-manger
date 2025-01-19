@@ -27,8 +27,8 @@ function BoardData({ todo }) {
           ))}
         </div>
       </div>
-      <div className="w-72 min-h-[75vh] self-stretch mt-9 from-[#cad5e5] to-slate-100">
-        <button className="w-full min-h-full rounded-md bg-gradient-to-b text-[#4e545e] font-bold text-2xl text-opacity-60 hover:text-primary-brightBlue ">
+      <div className="w-72 min-h-[75vh] self-stretch mt-9 from-[#cad5e5] to-slate-100 dark:from-[#2B2C37] dark:to-neutral-dark-layout ">
+        <button className="w-full min-h-full rounded-md bg-gradient-to-b text-[#4e545e] font-bold text-2xl text-opacity-60 hover:text-primary-brightBlue   ">
           + New Column
         </button>
       </div>

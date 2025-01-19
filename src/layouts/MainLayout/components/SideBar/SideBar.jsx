@@ -6,10 +6,13 @@ import AddNewBoard from "../NavBar/AddNewBoard.jsx";
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
 import { useEffect } from "react";
+import { set } from "react-hook-form";
 // import { useSearchParams } from "react-router";
 // import ButtonCollapse from "./ButtonCollapse.jsx";
 function SideBar() {
   const {
+    darkMode,
+    setDarkMode,
     openSideBar,
     handleOpenSideBar,
     openNewBoard,
@@ -38,10 +41,13 @@ function SideBar() {
   }
   return (
     <div
-      className={` mt-[92px] bg-natural-light-veryLightSideNavCards transition-all duration-1000 ease-in-out           
+      className={` mt-[92px] bg-natural-light-veryLightSideNavCards transition-all 
+        duration-700 ease-in-out 
+        dark:bg-neutral-dark-layout     
+        dark:text-neutral-dark-textSideBar
           ${
             openSideBar
-              ? "w-[370px] border-r-[1px] border-black-100 "
+              ? "w-[371px] border-r-[1px] border-black-100 dark:border-r-gray-600 "
               : "w-0 overflow-hidden "
           }`}
     >
@@ -59,7 +65,7 @@ function SideBar() {
           <ul className="flex flex-col gap-2 py-3 items-start w-full ">
             {boards.map((element) => {
               return (
-                <li key={element.id} className="w-full group ">
+                <li key={element.id} className="w-full group font-extrabold ">
                   <button
                     className="w-full py-2 pl-8 flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none"
                     onClick={() => navigateToBoard(element.id)}
@@ -98,21 +104,23 @@ function SideBar() {
           )}
         </div>
         <div>
-          <div className=" w-[85%] ml-7 flex flex-row justify-between items-center  bg-neutral-light-veryLightMain py-4 px-7 rounded-md ">
+          <div className=" w-[85%] ml-7 flex flex-row justify-between items-center  bg-neutral-light-veryLightMain py-4 px-7 rounded-md  dark:bg-neutral-dark-veryDarkMain">
             <div>
-              <img src={DarkIcon} alt="darkIcon" />
+              <img src={LightIcon} alt="darkIcon" />
             </div>
             <div>
               <input
                 type="checkbox"
-                className="cursor-pointer border-none relative appearance-none w-10 h-5 border-2 bg-white rounded-xl before:content-[''] before:absolute before:top-[50%] before:-translate-y-1/2 before:left-5 before:w-4 before:h-4 before:rounded-full before:bg-primary-brightBlue
+                className="cursor-pointer border-none relative appearance-none w-10 h-5 border-2 bg-primary-brightBlue rounded-xl before:content-[''] before:absolute before:top-[50%] before:-translate-y-1/2 before:left-5 before:w-4 before:h-4 before:rounded-full before:bg-white
               before:translate-x-0 before:transition-all before:duration-300
               checked:bg-primary-brightBlue checked:transition-all checked:duration-300
-              before:checked:bg-white before:checked:-translate-x-4 before:checked:transition-all before:checked:duration-300"
+              before:checked:bg-white before:checked:-translate-x-4 before:checked:transition-all before:checked:duration-300
+              "
+                onClick={() => setDarkMode(!darkMode)}
               />
             </div>
             <div>
-              <img src={LightIcon} alt="lightIcon" />
+              <img src={DarkIcon} alt="lightIcon" />
             </div>
           </div>
           <div
