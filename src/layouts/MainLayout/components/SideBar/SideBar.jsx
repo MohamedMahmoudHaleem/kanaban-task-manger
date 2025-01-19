@@ -5,7 +5,7 @@ import LightIcon from "../../../../assets/icon-light-theme.svg";
 import AddNewBoard from "../NavBar/AddNewBoard.jsx";
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 import HideIcon from "../../../../assets/icon-hide-sidebar.svg";
-import { useSearchParams } from "react-router";
+// import { useSearchParams } from "react-router";
 // import ButtonCollapse from "./ButtonCollapse.jsx";
 function SideBar() {
   const {
@@ -16,7 +16,7 @@ function SideBar() {
     handleCloseBoard,
     boards,
   } = useKanban();
-  console.log("useKanban", useKanban());
+  // console.log("useKanban", useKanban());
   // const [searchParams, setSearchParams] = useSearchParams();
 
   function navigateToBoard(id) {
@@ -48,9 +48,9 @@ function SideBar() {
             ALL BOARDS ({boards.length})
           </p>
           <ul className="flex flex-col gap-2 py-3 items-start w-full ">
-            {boards.map((element, index) => {
+            {boards.map((element) => {
               return (
-                <li key={index} className="w-full group ">
+                <li key={element.id} className="w-full group ">
                   <button
                     className="w-full py-2 pl-8 flex flex-row flex-nowrap items-center justify-start gap-4  text-neutral-light-ContentText font-semibold  hover:transition-all group-active:bg-primary-brightBlue hover:duration-150 hover:btn hover:w-[120%] hover:rounded-l-none"
                     onClick={() => navigateToBoard(element.id)}

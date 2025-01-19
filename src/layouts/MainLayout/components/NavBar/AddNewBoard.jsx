@@ -14,7 +14,6 @@ function AddNewBoard({ isOpen, handleClose }) {
     reset();
     handleClose();
   };
-  console.log("✌️ ~ AddNewBoard ~ boards:", boards);
 
   return (
     <Modal isOpen={isOpen} closeModal={handleClose}>

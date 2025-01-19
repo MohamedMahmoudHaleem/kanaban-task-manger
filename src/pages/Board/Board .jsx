@@ -9,13 +9,13 @@ function Board() {
 
   // get the id from url
   const searchParams = new URLSearchParams(window.location.search);
-  const id = searchParams.get("id"); 
+  const id = searchParams.get("id");
 
   const { data, isPending, error } = useQuery({
     queryKey: ["todo"],
     queryFn: getRequest,
   });
-  console.log("todo", data);
+  // console.log("todo", data);
   return (
     <div className="mt-20 min-h-full bg-neutral-light-veryLightMain w-full  ">
       <div
