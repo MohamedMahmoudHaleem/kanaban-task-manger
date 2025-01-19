@@ -1,4 +1,4 @@
-export const Modal = ({ isOpen, closeModal, children }) => {
+const Modal = ({ isOpen, closeModal, children }) => {
   return (
     <div
     // className="flex items-center justify-center min-h-screen bg-gray-100"
@@ -19,3 +19,4 @@ export const Modal = ({ isOpen, closeModal, children }) => {
     </div>
   );
 };
+export default Modal;
