@@ -1,4 +1,4 @@
-const Modal = ({ isOpen, closeModal, children }) => {
+const CustomModal = ({ isOpen, closeModal, children }) => {
   return (
     <div
     // className="flex items-center justify-center min-h-screen bg-gray-100"
@@ -20,4 +20,4 @@ const Modal = ({ isOpen, closeModal, children }) => {
     </div>
   );
 };
-export default Modal;
+export default CustomModal;

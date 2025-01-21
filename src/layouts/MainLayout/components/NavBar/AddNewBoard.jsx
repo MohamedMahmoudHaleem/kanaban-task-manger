@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-// import { Modal } from "../../../../Components/Modal.jsx";
-import Modal from '../../../../Components/Modal.jsx'
-import TextInput from "../../../../Components/TextInput.jsx";
+
+import TextInput from './../../../../Components/TextInput';
+import CustomModal from './../../../../Components/Modal';
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 
 function AddNewBoard({ isOpen, handleClose }) {
@@ -17,7 +17,7 @@ function AddNewBoard({ isOpen, handleClose }) {
   };
 
   return (
-    <Modal isOpen={isOpen} closeModal={handleClose}>
+    <CustomModal isOpen={isOpen} closeModal={handleClose}>
       <div className="">
         <h1
           className="text-neutral-light-mainText text-xl font-bold mb-7 dark:text-neutral-light-veryLightSideNavCards
@@ -51,7 +51,7 @@ function AddNewBoard({ isOpen, handleClose }) {
           </button>
         </form>
       </div>
-    </Modal>
+    </CustomModal>
   );
 }
 
