@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 
-import TextInput from './../../../../Components/TextInput';
-import CustomModal from './../../../../Components/Modal';
+import TextInput from './_components/TextInput.jsx';
+import CustomModal from './_components/Modal.jsx';
 import { useKanban } from "../../../../Context/kanbanContext.jsx";
 
 function AddNewBoard({ isOpen, handleClose }) {
