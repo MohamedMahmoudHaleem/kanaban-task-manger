@@ -1,5 +1,5 @@
-import Card from "../../../layouts/MainLayout/components/utilityComponents/Card.jsx";
 
+import Card from './../../../layouts/MainLayout/components/utilityComponents/Card';
 function BoardData({ todo }) {
   return (
     <div className="min-h-[75vh] flex flex-row gap-11 self-start mx-11 items-center  overflow-hidden">
