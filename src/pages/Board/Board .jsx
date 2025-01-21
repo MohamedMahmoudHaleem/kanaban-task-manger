@@ -1,9 +1,7 @@
-import AddNewBoard from "../../layouts/MainLayout/components/NavBar/AddNewBoard.jsx";
-import { getRequest } from "../../services/network.js";
-import { useKanban } from "../../Context/kanbanContext.jsx";
-import { useQuery } from "@tanstack/react-query";
-import CreateNewBoard from "./components/CreateNewBoard.jsx";
-import BoardData from "./components/BoardData.jsx";
+import AddNewBoard from "../../layouts/MainLayout/_components/NavBar/AddNewBoard";
+import { useKanban } from "../../Context/kanbanContext";
+import CreateNewBoard from "./components/CreateNewBoard";
+import BoardData from "./components/BoardData";
 
 function Board({ todo, isLoading, error }) {
   const { openNewBoard, handleOpenBoard, handleCloseBoard, boards } =
